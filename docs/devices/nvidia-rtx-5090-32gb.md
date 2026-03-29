@@ -42,10 +42,8 @@ benchmarks:
 - model: Qwen3.5-9B
   quant: int4
   framework: llama.cpp CUDA
-  decode_tps: 234.0
-  prefill_tps: 11650.0
-  estimated: true
-  estimated_from: Llama 7B Q4_0 llama-bench tg128, factor 7/9=0.78
+  decode_tps: 198.0
+  note: "measured"
 - model: Qwen3.5-27B
   quant: int4
   framework: llama.cpp CUDA

@@ -51,15 +51,15 @@ date: "2026-03-29"
 
 ### Qwen3.5-9B — 13.57 tps
 
-![Qwen3.5-9B benchmark](evidence/amd-8845hs-gem12-64gb/8845_9b.jpg)
+![Qwen3.5-9B benchmark](assets/amd-8845hs-gem12-64gb/8845_9b.jpg)
 
 ### Qwen3.5-27B — 4.32 tps
 
-![Qwen3.5-27B benchmark](evidence/amd-8845hs-gem12-64gb/8845_27b.jpg)
+![Qwen3.5-27B benchmark](assets/amd-8845hs-gem12-64gb/8845_27b.jpg)
 
 ### Qwen3.5-35B-A3B — 25.95 tps
 
-![Qwen3.5-35B-A3B benchmark](evidence/amd-8845hs-gem12-64gb/8845_35b_a3b.jpg)
+![Qwen3.5-35B-A3B benchmark](assets/amd-8845hs-gem12-64gb/8845_35b_a3b.jpg)
 
 ## Notes
 
