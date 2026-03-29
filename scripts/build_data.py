@@ -200,6 +200,8 @@ def build():
         json.dump(devices, f, ensure_ascii=False, indent=2)
 
     # Copy device markdown files to docs/devices/ for the detail page
+    if DOCS_DEVICES_DIR.exists():
+        shutil.rmtree(DOCS_DEVICES_DIR)
     DOCS_DEVICES_DIR.mkdir(parents=True, exist_ok=True)
     for filepath in md_files:
         shutil.copy2(filepath, DOCS_DEVICES_DIR / filepath.name)
