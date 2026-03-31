@@ -42,6 +42,73 @@
     "_source_file": "amd-8845hs-gem12-64gb.md"
   },
   {
+    "id": "amd-instinct-mi50-32gb",
+    "name": "AMD Instinct MI50 32GB",
+    "vendor": "AMD",
+    "device_type": "GPU",
+    "chip": "Vega 20 (GCN 5.1)",
+    "memory_capacity_gb": 32,
+    "memory_bandwidth_gbs": 1024,
+    "memory_type": "HBM2",
+    "memory_bus_width": "4096bit",
+    "tops_int8": 53,
+    "tops_note": "FP16 26.5 TFLOPS, no dedicated tensor cores",
+    "price_usd": 600,
+    "power_watts": 300,
+    "interface": "PCIe x16",
+    "benchmarks": [
+      {
+        "model": "Llama 3.1 8B",
+        "quant": "Q4_K_M",
+        "framework": "llama.cpp ROCm",
+        "decode_tps": 71.1,
+        "note": "measured, llama-bench tg128, ahelpme.com"
+      },
+      {
+        "model": "Qwen3-30B-A3B",
+        "quant": "Q4_K_M",
+        "framework": "llama.cpp ROCm",
+        "decode_tps": 73.1,
+        "note": "measured, Qwen3-Coder-30B-A3B llama-bench tg128, ahelpme.com"
+      },
+      {
+        "model": "Gemma3 27B",
+        "quant": "Q4_K_M",
+        "framework": "Ollama",
+        "decode_tps": 19.8,
+        "note": "measured, tinyredinc/paperhub GitHub"
+      },
+      {
+        "model": "Qwen3.5-9B",
+        "quant": "Q4_K_M",
+        "framework": "llama.cpp ROCm",
+        "decode_tps": 63.2,
+        "estimated": true,
+        "estimated_from": "Llama 3.1 8B 71.1 tps (8B -> 9B, x0.89, Dense->Dense)"
+      },
+      {
+        "model": "Qwen3.5-27B",
+        "quant": "Q4_K_M",
+        "framework": "Ollama",
+        "decode_tps": 19.8,
+        "estimated": true,
+        "estimated_from": "Gemma3 27B 19.8 tps (27B -> 27B, x1.00, Dense->Dense)"
+      },
+      {
+        "model": "Qwen3.5-35B-A3B",
+        "quant": "Q4_K_M",
+        "framework": "llama.cpp ROCm",
+        "decode_tps": 73.1,
+        "estimated": true,
+        "estimated_from": "Qwen3-30B-A3B 73.1 tps (3B -> 3B active, x1.00, MoE->MoE)"
+      }
+    ],
+    "submitted_by": "community",
+    "date": "2026-03-31",
+    "_has_errors": false,
+    "_source_file": "amd-instinct-mi50-32gb.md"
+  },
+  {
     "id": "amd-radeon-ai-pro-r9700-32gb",
     "name": "AMD Radeon AI PRO R9700 32GB",
     "vendor": "AMD",
@@ -511,6 +578,107 @@
     "date": "2026-03-28",
     "_has_errors": false,
     "_source_file": "apple-mac-studio-m4-max-64gb.md"
+  },
+  {
+    "id": "apple-macbook-pro-m5-max-128gb",
+    "name": "Apple MacBook Pro M5 Max 128GB (40-core GPU)",
+    "vendor": "Apple",
+    "device_type": "Mini PC",
+    "chip": "Apple M5 Max (18-core CPU, 40-core GPU)",
+    "memory_capacity_gb": 128,
+    "memory_bandwidth_gbs": 614,
+    "memory_type": "LPDDR5X",
+    "price_usd": 4999,
+    "power_watts": 100,
+    "interface": "Onboard",
+    "benchmarks": [
+      {
+        "model": "Qwen3.5-122B-A10B",
+        "quant": "Q4",
+        "framework": "MLX",
+        "decode_tps": 65.9,
+        "prefill_tps": 881.0,
+        "note": "measured, Hardware Corner, 4K context"
+      },
+      {
+        "model": "Qwen3.5-27B",
+        "quant": "Q6",
+        "framework": "MLX",
+        "decode_tps": 23.6,
+        "prefill_tps": 811.0,
+        "note": "measured, Hardware Corner, 4K context"
+      },
+      {
+        "model": "Llama 3.3 70B",
+        "quant": "Q4_K_M",
+        "framework": "MLX",
+        "decode_tps": 9.95,
+        "note": "measured, Hardware Corner"
+      },
+      {
+        "model": "Qwen3.5-9B",
+        "quant": "Q4",
+        "framework": "MLX",
+        "decode_tps": 78.7,
+        "estimated": true,
+        "estimated_from": "Qwen3.5-27B Q6 23.6 tps, bandwidth model: 614*0.9/4.5=122.8 ceiling, scaled from 27B Q6 actual/ceiling ratio"
+      },
+      {
+        "model": "Qwen3.5-35B-A3B",
+        "quant": "Q4",
+        "framework": "MLX",
+        "decode_tps": 65.9,
+        "estimated": true,
+        "estimated_from": "Qwen3.5-122B-A10B 65.9 tps (10B -> 3B active, MoE->MoE, conservative same speed)"
+      }
+    ],
+    "submitted_by": "community",
+    "date": "2026-03-31",
+    "_has_errors": false,
+    "_source_file": "apple-macbook-pro-m5-max-128gb.md"
+  },
+  {
+    "id": "apple-macbook-pro-m5-pro-64gb",
+    "name": "Apple MacBook Pro M5 Pro 64GB",
+    "vendor": "Apple",
+    "device_type": "Mini PC",
+    "chip": "Apple M5 Pro (18-core CPU, 20-core GPU)",
+    "memory_capacity_gb": 64,
+    "memory_bandwidth_gbs": 307,
+    "memory_type": "LPDDR5X",
+    "price_usd": 3080,
+    "power_watts": 70,
+    "interface": "Onboard",
+    "benchmarks": [
+      {
+        "model": "Qwen3.5-9B",
+        "quant": "Q4",
+        "framework": "MLX",
+        "decode_tps": 39.4,
+        "estimated": true,
+        "estimated_from": "M5 Max 9B 78.7 tps × BW ratio 307/614 = 0.5"
+      },
+      {
+        "model": "Qwen3.5-27B",
+        "quant": "Q4",
+        "framework": "MLX",
+        "decode_tps": 11.8,
+        "estimated": true,
+        "estimated_from": "M5 Max 27B Q6 23.6 tps × BW ratio 307/614 = 0.5"
+      },
+      {
+        "model": "Qwen3.5-35B-A3B",
+        "quant": "Q4",
+        "framework": "MLX",
+        "decode_tps": 33.0,
+        "estimated": true,
+        "estimated_from": "M5 Max 35B-A3B 65.9 tps × BW ratio 307/614 = 0.5"
+      }
+    ],
+    "submitted_by": "community",
+    "date": "2026-03-31",
+    "_has_errors": false,
+    "_source_file": "apple-macbook-pro-m5-pro-64gb.md"
   },
   {
     "id": "axera-m4n-dock-ax650n",
