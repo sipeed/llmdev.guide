@@ -264,6 +264,42 @@
     "_source_file": "amd-rx-7900-xtx-24gb.md"
   },
   {
+    "id": "amd-rx-9070-xt-16gb",
+    "name": "AMD Radeon RX 9070 XT 16GB",
+    "vendor": "AMD",
+    "device_type": "GPU",
+    "chip": "Navi 48 (RDNA 4)",
+    "memory_capacity_gb": 16,
+    "memory_bandwidth_gbs": 624,
+    "memory_type": "GDDR6",
+    "memory_bus_width": "256bit",
+    "price_usd": 550,
+    "power_watts": 300,
+    "interface": "PCIe 5.0 x16",
+    "benchmarks": [
+      {
+        "model": "Llama 2 7B",
+        "quant": "Q4_0",
+        "framework": "llama.cpp ROCm",
+        "decode_tps": 108.0,
+        "prefill_tps": 4914.0,
+        "note": "measured, llama.cpp GitHub #15021, tg128, FA=1"
+      },
+      {
+        "model": "Qwen3.5-9B",
+        "quant": "Q4",
+        "framework": "llama.cpp ROCm",
+        "decode_tps": 86.4,
+        "estimated": true,
+        "estimated_from": "Llama 2 7B 108.0 tps (7B -> 9B, x0.78, Dense->Dense, Qwen3.5 ~24% slower on GPU adjusted to x0.80)"
+      }
+    ],
+    "submitted_by": "community",
+    "date": "2026-04-03",
+    "_has_errors": false,
+    "_source_file": "amd-rx-9070-xt-16gb.md"
+  },
+  {
     "id": "apple-mac-mini-m4-16gb",
     "name": "Apple Mac Mini M4 16GB",
     "vendor": "Apple",
@@ -1254,6 +1290,49 @@
     "_source_file": "nvidia-rtx-4060-ti-16gb.md"
   },
   {
+    "id": "nvidia-rtx-4080-super-16gb",
+    "name": "NVIDIA GeForce RTX 4080 SUPER 16GB",
+    "vendor": "NVIDIA",
+    "device_type": "GPU",
+    "chip": "AD103 (Ada Lovelace)",
+    "memory_capacity_gb": 16,
+    "memory_bandwidth_gbs": 736,
+    "memory_type": "GDDR6X",
+    "price_usd": 1000,
+    "power_watts": 320,
+    "interface": "PCIe x16",
+    "benchmarks": [
+      {
+        "model": "Qwen3 8B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 104.2,
+        "prefill_tps": 6137.0,
+        "note": "measured, Hardware Corner GPU ranking, 4K context"
+      },
+      {
+        "model": "Qwen3 14B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 64.2,
+        "prefill_tps": 3745.0,
+        "note": "measured, Hardware Corner GPU ranking, 4K context"
+      },
+      {
+        "model": "Qwen3.5-9B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 92.7,
+        "estimated": true,
+        "estimated_from": "Qwen3 8B 104.2 tps (8B -> 9B, x0.89, Dense->Dense)"
+      }
+    ],
+    "submitted_by": "community",
+    "date": "2026-04-03",
+    "_has_errors": false,
+    "_source_file": "nvidia-rtx-4080-super-16gb.md"
+  },
+  {
     "id": "nvidia-rtx-4090-24gb",
     "name": "NVIDIA RTX 4090 24GB",
     "vendor": "NVIDIA",
@@ -1330,6 +1409,50 @@
     "_source_file": "nvidia-rtx-4090-24gb.md"
   },
   {
+    "id": "nvidia-rtx-5060-ti-16gb",
+    "name": "NVIDIA GeForce RTX 5060 Ti 16GB",
+    "vendor": "NVIDIA",
+    "device_type": "GPU",
+    "chip": "GB206 (Blackwell)",
+    "memory_capacity_gb": 16,
+    "memory_bandwidth_gbs": 448,
+    "memory_type": "GDDR7",
+    "memory_bus_width": "128bit",
+    "price_usd": 429,
+    "power_watts": 180,
+    "interface": "PCIe x16",
+    "benchmarks": [
+      {
+        "model": "Qwen3 8B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 69.2,
+        "prefill_tps": 2965.0,
+        "note": "measured, Hardware Corner GPU ranking, 4K context"
+      },
+      {
+        "model": "Qwen3 14B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 41.1,
+        "prefill_tps": 1743.0,
+        "note": "measured, Hardware Corner GPU ranking, 4K context"
+      },
+      {
+        "model": "Qwen3.5-9B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 61.6,
+        "estimated": true,
+        "estimated_from": "Qwen3 8B 69.2 tps (8B -> 9B, x0.89, Dense->Dense)"
+      }
+    ],
+    "submitted_by": "community",
+    "date": "2026-04-03",
+    "_has_errors": false,
+    "_source_file": "nvidia-rtx-5060-ti-16gb.md"
+  },
+  {
     "id": "nvidia-rtx-5070-12gb",
     "name": "NVIDIA GeForce RTX 5070 12GB",
     "vendor": "NVIDIA",
@@ -1376,6 +1499,50 @@
     "date": "2026-03-29",
     "_has_errors": false,
     "_source_file": "nvidia-rtx-5070-12gb.md"
+  },
+  {
+    "id": "nvidia-rtx-5070-ti-16gb",
+    "name": "NVIDIA GeForce RTX 5070 Ti 16GB",
+    "vendor": "NVIDIA",
+    "device_type": "GPU",
+    "chip": "GB203 (Blackwell)",
+    "memory_capacity_gb": 16,
+    "memory_bandwidth_gbs": 896,
+    "memory_type": "GDDR7",
+    "memory_bus_width": "256bit",
+    "price_usd": 749,
+    "power_watts": 300,
+    "interface": "PCIe x16",
+    "benchmarks": [
+      {
+        "model": "Qwen3 8B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 120.5,
+        "prefill_tps": 5557.0,
+        "note": "measured, Hardware Corner GPU ranking, 4K context"
+      },
+      {
+        "model": "Qwen3 14B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 74.3,
+        "prefill_tps": 3265.0,
+        "note": "measured, Hardware Corner GPU ranking, 4K context"
+      },
+      {
+        "model": "Qwen3.5-9B",
+        "quant": "Q4_K",
+        "framework": "llama.cpp",
+        "decode_tps": 107.2,
+        "estimated": true,
+        "estimated_from": "Qwen3 8B 120.5 tps (8B -> 9B, x0.89, Dense->Dense)"
+      }
+    ],
+    "submitted_by": "community",
+    "date": "2026-04-03",
+    "_has_errors": false,
+    "_source_file": "nvidia-rtx-5070-ti-16gb.md"
   },
   {
     "id": "nvidia-rtx-5080-16gb",
@@ -1498,6 +1665,71 @@
     "date": "2026-03-28",
     "_has_errors": false,
     "_source_file": "nvidia-rtx-5090-32gb.md"
+  },
+  {
+    "id": "nvidia-tesla-p40-24gb",
+    "name": "NVIDIA Tesla P40 24GB",
+    "vendor": "NVIDIA",
+    "device_type": "GPU",
+    "chip": "GP102 (Pascal)",
+    "memory_capacity_gb": 24,
+    "memory_bandwidth_gbs": 346,
+    "memory_type": "GDDR5X",
+    "memory_bus_width": "384bit",
+    "price_usd": 150,
+    "power_watts": 250,
+    "interface": "PCIe 3.0 x16",
+    "benchmarks": [
+      {
+        "model": "Llama 2 7B",
+        "quant": "Q4_0",
+        "framework": "llama.cpp",
+        "decode_tps": 40.9,
+        "note": "measured, localscore.ai"
+      },
+      {
+        "model": "Qwen2.5 14B",
+        "quant": "Q4_K_M",
+        "framework": "llama.cpp",
+        "decode_tps": 13.6,
+        "note": "measured, localscore.ai"
+      },
+      {
+        "model": "Qwen3-30B-A3B",
+        "quant": "Q4_K_M",
+        "framework": "llama.cpp",
+        "decode_tps": 29.3,
+        "note": "measured, localscore.ai"
+      },
+      {
+        "model": "Qwen3.5-9B",
+        "quant": "Q4",
+        "framework": "llama.cpp",
+        "decode_tps": 32.7,
+        "estimated": true,
+        "estimated_from": "Llama 2 7B 40.9 tps (7B -> 9B, x0.78, Dense->Dense, Qwen3.5 ~24% slower adjusted to x0.80)"
+      },
+      {
+        "model": "Qwen3.5-27B",
+        "quant": "Q4",
+        "framework": "llama.cpp",
+        "decode_tps": 13.6,
+        "estimated": true,
+        "estimated_from": "Qwen2.5 14B 13.6 tps (14B -> 27B, bandwidth-bound: 346*0.9/15.5=20.1 ceiling, actual ~68% efficiency)"
+      },
+      {
+        "model": "Qwen3.5-35B-A3B",
+        "quant": "Q4",
+        "framework": "llama.cpp",
+        "decode_tps": 29.3,
+        "estimated": true,
+        "estimated_from": "Qwen3-30B-A3B 29.3 tps (3B -> 3B active, x1.00, MoE->MoE)"
+      }
+    ],
+    "submitted_by": "community",
+    "date": "2026-04-03",
+    "_has_errors": false,
+    "_source_file": "nvidia-tesla-p40-24gb.md"
   },
   {
     "id": "qualcomm-snapdragon-x-elite-laptop",
